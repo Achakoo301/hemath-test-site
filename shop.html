@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop | HemAth</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+<div class="logo">HemAth</div>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="shop.html">Shop</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="artisans.html">Artisans</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<section class="section">
+<h2>Shop Collection</h2>
+
+<div class="filters">
+<button onclick="filter('all')">All</button>
+<button onclick="filter('jewelry')">Jewelry</button>
+<button onclick="filter('spices')">Spices</button>
+<button onclick="filter('garments')">Garments</button>
+</div>
+
+<div class="products">
+
+<div class="product">
+  <img src="images/Shawl6Bundle.JPG" alt="Shawl 6 Bundle">
+  <h3>Shawl 6 Bundle</h3>
+  <p>$59.99</p>
+  <button onclick="addToCart('Shawl 6 Bundle', 59.99)">
+    Add to Cart
+  </button>
+</div>
+
+
+<div class="product-card" data-cat="jewelry">
+<img src="product1.jpg">
+<h3>Jewelry</h3>
+<p>Handcrafted Kashmiri jewelry</p>
+<button onclick="openModal('Jewelry')">Quick View</button>
+</div>
+
+<div class="product-card" data-cat="spices">
+<img src="product2.jpg">
+<h3>Spices</h3>
+<p>Authentic blends</p>
+<button onclick="openModal('Spices')">Quick View</button>
+</div>
+
+</div>
+</section>
+
+<div id="modal" class="modal">
+<div class="modal-box">
+<h3 id="modalTitle"></h3>
+<p>Contact us to order this product.</p>
+<button onclick="closeModal()">Close</button>
+</div>
+</div>
+
+<script>
+function filter(cat){
+document.querySelectorAll('.product-card').forEach(c=>{
+c.style.display=(cat==='all'||c.dataset.cat===cat)?'block':'none';
+});
+}
+function openModal(p){
+document.getElementById('modal').style.display='flex';
+document.getElementById('modalTitle').innerText=p;
+}
+function closeModal(){
+document.getElementById('modal').style.display='none';
+}
