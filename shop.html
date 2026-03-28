@@ -24,35 +24,24 @@
 
 <div class="filters">
 <button onclick="filter('all')">All</button>
+<button onclick="filter('shawls')">Shawls</button>
 <button onclick="filter('jewelry')">Jewelry</button>
-<button onclick="filter('spices')">Spices</button>
-<button onclick="filter('garments')">Garments</button>
 </div>
 
 <div class="products">
 
-<div class="product">
-  <img src="images/Shawl6Bundle.JPG" alt="Shawl 6 Bundle">
-  <h3>Shawl 6 Bundle</h3>
-  <p>$59.99</p>
-  <button onclick="addToCart('Shawl 6 Bundle', 59.99)">
-    Add to Cart
-  </button>
+<div class="product-card" data-cat="shawls">
+  <img src="images/DSC00056.JPG" alt="Shawl 6 Bundle">
+  <h3>Shawl</h3>
+  <p>Handwoven Kashmiri shawl set</p>
+  <button onclick="openModal('DSC00056')">Request Item</button>
 </div>
-
 
 <div class="product-card" data-cat="jewelry">
-<img src="product1.jpg">
-<h3>Jewelry</h3>
-<p>Handcrafted Kashmiri jewelry</p>
-<button onclick="openModal('Jewelry')">Quick View</button>
-</div>
-
-<div class="product-card" data-cat="spices">
-<img src="product2.jpg">
-<h3>Spices</h3>
-<p>Authentic blends</p>
-<button onclick="openModal('Spices')">Quick View</button>
+  <img src="images/jewelry.jpg" alt="Artisan Jewelry">
+  <h3>Handcrafted Jewelry</h3>
+  <p>Elegant artisan jewelry pieces</p>
+  <button onclick="openModal('jewelry')">Request Item</button>
 </div>
 
 </div>
@@ -61,21 +50,9 @@
 <div id="modal" class="modal">
 <div class="modal-box">
 <h3 id="modalTitle"></h3>
-<p>Contact us to order this product.</p>
+<p>Email us at info@hemath.org or use the contact page to request this item.</p>
 <button onclick="closeModal()">Close</button>
 </div>
 </div>
 
 <script>
-function filter(cat){
-document.querySelectorAll('.product-card').forEach(c=>{
-c.style.display=(cat==='all'||c.dataset.cat===cat)?'block':'none';
-});
-}
-function openModal(p){
-document.getElementById('modal').style.display='flex';
-document.getElementById('modalTitle').innerText=p;
-}
-function closeModal(){
-document.getElementById('modal').style.display='none';
-}
