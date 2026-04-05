@@ -40,3 +40,6 @@
 .product-card:hover {
   transform: translateY(-8px);
 }
+img {
+  border-radius: 8px;
+}
