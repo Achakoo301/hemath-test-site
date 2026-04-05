@@ -43,3 +43,23 @@
 img {
   border-radius: 8px;
 }
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .section {
+    padding: 40px 20px;
+  }
+}button {
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #5a1620;
+}
