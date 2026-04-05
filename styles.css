@@ -1,65 +1,109 @@
+body {
+margin: 0;
+font-family: Arial;
+background: #faf7f5;
+}
+
+nav {
+background: #7a1f2b;
+color: white;
+padding: 15px;
+display: flex;
+justify-content: space-between;
+}
+
+nav ul {
+display: flex;
+list-style: none;
+gap: 15px;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+}
+
+.hero {
+height: 400px;
+background: url('hero-artisan.jpg') center/cover;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+.btn {
+background: white;
+color: #7a1f2b;
+padding: 10px 20px;
+text-decoration: none;
+}
+
+.section {
+padding: 60px;
+text-align: center;
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+gap: 20px;
+}
+
+.card {
+background: white;
+padding: 15px;
+border-radius: 8px;
+}
+
 .products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+gap: 20px;
 }
 
 .product-card {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: 0.3s;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+background: white;
+padding: 15px;
+border-radius: 8px;
 }
 
 .product-card img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
+width: 100%;
+height: auto;
 }
 
-.product-card h3 {
-  margin: 15px;
+.filters button {
+margin: 5px;
+padding: 8px;
+background: #7a1f2b;
+color: white;
+border: none;
 }
 
-.product-card p {
-  margin: 0 15px 15px;
+.modal {
+display: none;
+position: fixed;
+inset: 0;
+background: rgba(0,0,0,0.6);
+align-items: center;
+justify-content: center;
 }
 
-.product-card button {
-  margin: 0 15px 20px;
-  padding: 10px;
-  width: calc(100% - 30px);
-  background: #7a1f2b;
-  color: white;
-  border: none;
-  border-radius: 5px;
+.modal-box {
+background: white;
+padding: 20px;
 }
 
-.product-card:hover {
-  transform: translateY(-8px);
-}
-img {
-  border-radius: 8px;
-}
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero h1 {
-    font-size: 28px;
-  }
-
-  .section {
-    padding: 40px 20px;
-  }
-}button {
-  transition: 0.3s;
+.contact {
+background: #7a1f2b;
+color: white;
 }
 
-button:hover {
-  background: #5a1620;
+footer {
+text-align: center;
+padding: 20px;
+background: #4e121b;
+color: white;
 }
